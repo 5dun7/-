@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爬楼梯</title>
+    <script>
+        var n = +prompt("请输入剩余楼梯阶数")
+        var climb = function(n) {
+            const arr = [];
+            arr[1] = 1;
+            arr[2] = 2;
+            for (let i = 3; i <= n; i++) {
+                arr[i] = arr[i - 1] + arr[i - 2];
+
+            }
+            document.write("你有" + arr[n] + "种不同的方法爬到楼顶");
+        }
+        climb(n);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
